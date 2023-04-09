@@ -16,16 +16,8 @@ namespace SafariPark
             Lion lion = new Lion();
             Wolf wolf = new Wolf();
 
-            Animals[] animals = new Animals[4];
-            animals[0] = lynx;
-            animals[1] = leopard;
-            animals[2] = lion;
-            animals[3] = wolf;
-
-            for (int i = 0; i < animals.Length; i++)
-            {
-                Console.WriteLine(animals[i].Name);
-            }
+            IAnimalsGroup[] _animals = {lynx, leopard, lion, wolf};
+            Console.WriteLine(_animals[0].Name);
         }
     }
 }

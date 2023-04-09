@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SafariPark.Struct
 {
-    public abstract class Animals
+    public abstract class Animals : IAnimalsGroup
     {
         public abstract string Name { get; set; }
         public abstract int Speed { get; set; }
