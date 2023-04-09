@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SafariPark.Animals
+namespace SafariPark.Struct
 {
-    internal class Wolf
+    public abstract class Panthera : CatsFamily
     {
+        public bool IsRoar { get; set; } = true;
     }
 }

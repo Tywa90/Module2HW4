@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SafariPark.Animals
+namespace SafariPark.Struct
 {
-    public abstract class CatsFamily : Predators
+    public abstract class Predators : Animals
     {
-        public bool WithWhiskers { get; set; } = true;
+        public bool IsEatMeat { get; set; } = true;
     }
 }
