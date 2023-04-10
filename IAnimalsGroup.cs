@@ -10,6 +10,6 @@ namespace SafariPark
     {
         string Name { get; set; }
         int Speed { get; set; }
-        int MaxWeight { get; set; }
+        float MaxWeight { get; set; }
     }
 }

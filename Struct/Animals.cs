@@ -10,7 +10,7 @@ namespace SafariPark.Struct
     {
         public abstract string Name { get; set; }
         public abstract int Speed { get; set; }
-        public virtual int MaxWeight { get; set; }
+        public virtual float MaxWeight { get; set; }
 
         public int CompareTo(object? obj)
         {

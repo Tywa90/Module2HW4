@@ -10,7 +10,7 @@ namespace SafariPark.Struct
     {
         public override string Name { get; set; } = "Lion";
         public override int Speed { get; set; } = 80;
-        public override int MaxWeight { get; set; } = 250;
+        public override float MaxWeight { get; set; } = 250;
         public bool HaveMane { get; set; } = true;
     }
 }

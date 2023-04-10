@@ -25,11 +25,17 @@ namespace SafariPark
             Lynx lynx = new Lynx();
             Leopard leopard = new Leopard();
             Lion lion = new Lion();
+            Mice mice = new Mice();
+            Rat rat = new Rat();
+            Gepard gepard = new Gepard();
 
             help.Add(lynx);
             help.Add(leopard);
             help.Add(lion);
             help.Add(wolf);
+            help.Add(mice);
+            help.Add(rat);
+            help.Add(gepard);
         }
     }
 }
