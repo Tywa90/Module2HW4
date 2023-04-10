@@ -9,15 +9,26 @@ namespace SafariPark
 {
     public class Starter
     {
+        private HelpClass help = new HelpClass();
         public void Run()
+        {
+            AddingAnimals();
+            Console.WriteLine();
+            help.DisplaySafari();
+            help.AnimalsCounter();
+        }
+        public void AddingAnimals()
         {
             Lynx lynx = new Lynx();
             Leopard leopard = new Leopard();
             Lion lion = new Lion();
             Wolf wolf = new Wolf();
 
-            IAnimalsGroup[] _animals = {lynx, leopard, lion, wolf};
-            Console.WriteLine(_animals[0].Name);
+            help.Add(lynx);
+            help.Add(leopard);
+            help.Add(lion);
+            help.Add(wolf);
+
         }
     }
 }
