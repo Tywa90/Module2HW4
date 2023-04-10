@@ -17,6 +17,7 @@ namespace SafariPark
             help.AnimalsCounter();
 
             help.DisplaySort();
+            help.FindName("lion");
         }
         public void AddingAnimals()
         {

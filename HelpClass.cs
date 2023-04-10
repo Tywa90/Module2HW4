@@ -29,7 +29,6 @@ namespace SafariPark
             {
                 _animals[i] = animal;
                 CountAllAnimals++;
-                break;
             }
         }
         public void AnimalsCounter()
@@ -47,9 +46,16 @@ namespace SafariPark
         }
         public void DisplaySort()
         {
+            Console.WriteLine("Sort by animal name:");
             Array.Sort(AllAnimals);
             DisplaySafari();
-            Console.WriteLine();
+        }
+        public void FindName(string name)
+        {
+            Safari s = new Safari();
+            s.Animals = _animals;
+            var prod = s.Animals.FindByName(name);
+            Console.WriteLine($"I found this animal by name: {prod.Name}");
         }
     }
 }
