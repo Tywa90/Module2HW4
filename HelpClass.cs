@@ -13,6 +13,7 @@ namespace SafariPark
         private IAnimalsGroup[] _animals;
         private int _animalsLength = 0;
         public int CountAllAnimals { get; set; }
+        public IAnimalsGroup[] AllAnimals { get { return _animals; } }
 
         public HelpClass()
         {
@@ -31,6 +32,10 @@ namespace SafariPark
                 break;
             }
         }
+        public void AnimalsCounter()
+        {
+            Console.WriteLine($"Total: {CountAllAnimals} animals");
+        }
         public void DisplaySafari()
         {
             Console.WriteLine("Animals:".PadRight(17) + "Max speed:");
@@ -38,10 +43,13 @@ namespace SafariPark
             {
                 Console.WriteLine(item.Name.PadRight(20) + item.Speed);
             }
+            Console.WriteLine();
         }
-        public void AnimalsCounter()
+        public void DisplaySort()
         {
-            Console.WriteLine($"Total: {CountAllAnimals} animals");
+            Array.Sort(AllAnimals);
+            DisplaySafari();
+            Console.WriteLine();
         }
     }
 }

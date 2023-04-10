@@ -13,22 +13,22 @@ namespace SafariPark
         public void Run()
         {
             AddingAnimals();
-            Console.WriteLine();
             help.DisplaySafari();
             help.AnimalsCounter();
+
+            help.DisplaySort();
         }
         public void AddingAnimals()
         {
+            Wolf wolf = new Wolf();
             Lynx lynx = new Lynx();
             Leopard leopard = new Leopard();
             Lion lion = new Lion();
-            Wolf wolf = new Wolf();
 
             help.Add(lynx);
             help.Add(leopard);
             help.Add(lion);
             help.Add(wolf);
-
         }
     }
 }
