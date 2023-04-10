@@ -9,16 +9,18 @@ namespace SafariPark
 {
     public class Starter
     {
-        private HelpClass help = new HelpClass();
+        private readonly HelpClass _help = new HelpClass();
+
         public void Run()
         {
             AddingAnimals();
-            help.DisplaySafari();
-            help.AnimalsCounter();
+            _help.DisplaySafari();
+            _help.AnimalsCounter();
 
-            help.DisplaySort();
-            help.FindName("lion");
+            _help.DisplaySort();
+            _help.FindName("lion");
         }
+
         public void AddingAnimals()
         {
             Wolf wolf = new Wolf();
@@ -29,13 +31,13 @@ namespace SafariPark
             Rat rat = new Rat();
             Gepard gepard = new Gepard();
 
-            help.Add(lynx);
-            help.Add(leopard);
-            help.Add(lion);
-            help.Add(wolf);
-            help.Add(mice);
-            help.Add(rat);
-            help.Add(gepard);
+            _help.Add(lynx);
+            _help.Add(leopard);
+            _help.Add(lion);
+            _help.Add(wolf);
+            _help.Add(mice);
+            _help.Add(rat);
+            _help.Add(gepard);
         }
     }
 }

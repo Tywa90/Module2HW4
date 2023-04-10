@@ -1,10 +1,10 @@
-﻿using SafariPark.Struct;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using SafariPark.Struct;
 
 namespace SafariPark
 {
@@ -12,12 +12,15 @@ namespace SafariPark
     {
         private IAnimalsGroup[] _animals;
         private int _animalsLength = 0;
-        public int CountAllAnimals { get; set; }
-        public IAnimalsGroup[] AllAnimals { get { return _animals; } }
-
         public HelpClass()
         {
             _animals = new IAnimalsGroup[1];
+        }
+
+        public int CountAllAnimals { get; set; }
+        public IAnimalsGroup[] AllAnimals
+        {
+            get { return _animals; }
         }
 
         public void Add(IAnimalsGroup animal)
@@ -31,10 +34,12 @@ namespace SafariPark
                 CountAllAnimals++;
             }
         }
+
         public void AnimalsCounter()
         {
             Console.WriteLine($"Total: {CountAllAnimals} animals");
         }
+
         public void DisplaySafari()
         {
             Console.WriteLine("Animals:".PadRight(17) + "Max speed:");
@@ -42,14 +47,17 @@ namespace SafariPark
             {
                 Console.WriteLine(item.Name.PadRight(20) + item.Speed);
             }
+
             Console.WriteLine();
         }
+
         public void DisplaySort()
         {
             Console.WriteLine("Sort by animal name:");
             Array.Sort(AllAnimals);
             DisplaySafari();
         }
+
         public void FindName(string name)
         {
             Safari s = new Safari();

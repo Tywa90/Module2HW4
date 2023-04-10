@@ -8,7 +8,7 @@ namespace SafariPark
 {
     public static class SafariExtension
     {
-        public static IAnimalsGroup FindByName (this IAnimalsGroup[] animals, string name)
+        public static IAnimalsGroup FindByName(this IAnimalsGroup[] animals, string name)
         {
             foreach (var item in animals)
             {
@@ -17,8 +17,8 @@ namespace SafariPark
                     return item;
                 }
             }
+
             return null;
         }
     }
 }
-
